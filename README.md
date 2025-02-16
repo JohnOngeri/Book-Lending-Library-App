@@ -6,6 +6,7 @@ This is a simple Book Lending Library application built using Ruby on Rails. The
 
 ![Screenshot 2025-02-16 180621](https://github.com/user-attachments/assets/663fa0a0-5d63-4b57-b8ed-c70ad2d04aab)
 
+![Screenshot 2025-02-16 180547](https://github.com/user-attachments/assets/27a05cf7-52a7-4ea5-9296-54722acdf1c3)
 
 Prerequisites
 
@@ -24,6 +25,7 @@ Installation and Setup
 Clone the repository:
 
 git clone https://github.com/your-username/book_lending_library.git
+
 cd book_lending_library
 
 Install dependencies:
