@@ -1,0 +1,48 @@
+<style>
+  .table {
+    margin-top: 20px;
+  }
+
+  th, td {
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+</style>
+
+<h1 class="text-center">Borrower History</h1>
+
+<form id="borrower-history-form" action="/borrowings/history" method="get">
+  <label for="borrower_name">Enter Borrower's Name:</label>
+  <input type="text" id="borrower_name" name="borrower_name">
+  <button type="submit">Get History</button>
+</form>
+
+<div id="borrower-history-table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Book</th>
+        <th>Borrowed At</th>
+        <th>Returned At</th>
+      </tr>
+    </thead>
+    <tbody id="borrower-history-body">
+      <% if @borrowings.present? %>
+        <% @borrowings.each do |borrowing| %>
+          <tr>
+            <td><%= borrowing.book.title %></td>
+            <td><%= borrowing.created_at.strftime('%Y-%m-%d') %></td>
+            <td><%= borrowing.updated_at.strftime('%Y-%m-%d') if borrowing.updated_at %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
